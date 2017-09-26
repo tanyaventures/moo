@@ -1,6 +1,7 @@
 package com.moo.features.search;
 
 import com.moo.steps.HomePageSteps;
+import com.moo.steps.SearchResultsSteps;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
@@ -18,6 +19,9 @@ public class SearchProductStory {
     @Steps
     public HomePageSteps homePageSteps;
 
+    @Steps
+    SearchResultsSteps searchResultsSteps;
+
     @Before
     public void openHomePage() {
         homePageSteps.openHomePage();
@@ -25,6 +29,9 @@ public class SearchProductStory {
 
     @Test
     public void searchingForValidProduct() {
-        homePageSteps.searchForItem("business cards");
+        final String input = "business cards";
+        homePageSteps.searchForItem(input);
+        searchResultsSteps.checkSearchInput(input);
+        searchResultsSteps.hasReturnedResults();
     }
 }

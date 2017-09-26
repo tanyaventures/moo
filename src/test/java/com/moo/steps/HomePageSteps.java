@@ -7,7 +7,7 @@ public class HomePageSteps {
 
     HomePage homePage;
 
-    @Step
+    @Step("Searching for: {0}")
     public void searchForItem(String input) {
         homePage.inputSearchField(input);
         homePage.clickOnSearchButton();
