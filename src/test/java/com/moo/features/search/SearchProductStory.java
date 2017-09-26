@@ -32,6 +32,17 @@ public class SearchProductStory {
         final String input = "business cards";
         homePageSteps.searchForItem(input);
         searchResultsSteps.checkSearchInput(input);
+        searchResultsSteps.checkResultCountIsDisplayed(true);
         searchResultsSteps.hasReturnedResults();
+    }
+
+    @Test
+    public void searchingForInvalidProduct() {
+        final String input = "sdjfnjsdfj";
+        homePageSteps.searchForItem(input);
+        searchResultsSteps.checkSearchInput(input);
+        searchResultsSteps.checkResultCountIsDisplayed(false);
+        searchResultsSteps.errorIsMessageDisplayed();
+
     }
 }

@@ -13,6 +13,9 @@ public class SearchResultsPage extends PageObject {
     @FindBy(css="h1")
     private WebElementFacade resultsHeading;
 
+    @FindBy(className = "gs-snippet")
+    private WebElementFacade errorMessage;
+
     public String getResultsHeading() {
         return resultsHeading.getText();
     }
@@ -23,5 +26,9 @@ public class SearchResultsPage extends PageObject {
 
     public List<WebElementFacade> getResultsList() {
         return findAll("div.gsc-results div.gs-title");
+    }
+
+    public String getErrorMessage() {
+        return errorMessage.getText();
     }
 }
