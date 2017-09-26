@@ -25,4 +25,5 @@ public class BasicMooPageSteps {
         assertTrue(basicMooPage.isSideBarOpen());
         assertThat(basicMooPage.getSideBarHeading()).isEqualToIgnoringCase("Popular Questions");
     }
+
 }

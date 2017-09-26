@@ -1,7 +1,6 @@
 package com.moo.features.help;
 
 import com.moo.steps.HomePageSteps;
-import com.moo.steps.SearchResultsSteps;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
