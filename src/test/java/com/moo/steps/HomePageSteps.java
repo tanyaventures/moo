@@ -3,7 +3,7 @@ package com.moo.steps;
 import com.moo.pages.HomePage;
 import net.thucydides.core.annotations.Step;
 
-public class HomePageSteps {
+public class HomePageSteps extends BasicMooPageSteps {
 
     HomePage homePage;
 

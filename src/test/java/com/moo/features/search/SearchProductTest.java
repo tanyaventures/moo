@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
 @RunWith(SerenityRunner.class)
-public class SearchProductStory {
+public class SearchProductTest {
 
     @Managed(uniqueSession = false)
     public WebDriver webdriver;
